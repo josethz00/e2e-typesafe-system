@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev src/index.ts"
+    "dev": "ts-node-dev src/index.ts",
+    "build": "npm i && npx prisma generate"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +18,13 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "@prisma/client": "^4.8.0"
+    "@graphql-yoga/node": "^3.3.0",
+    "@pothos/core": "^3.24.0",
+    "@pothos/plugin-prisma": "^3.40.0",
+    "@prisma/client": "^4.8.0",
+    "fastify": "^4.11.0",
+    "graphql": "^16.6.0",
+    "graphql-scalars": "^1.20.1"
   },
   "prisma": {
     "seed": "ts-node-dev prisma/seed.ts"
